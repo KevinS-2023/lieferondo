@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferondo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+
+<body onload="render()">
+    <!-- Header -->
+    <header class="displayFlex">
+        <div class="displayFlex">
+            <img src="./icons/main-icon.svg" alt="Main Icon">
+            <h1>Lieferonda</h1>
+        </div>
+        <h1>Menu</h1>
+        <div class="displayFlex">
+            <img src="./img/german.jpg" alt="german flag" id="flagImg">
+            <img src="./icons/menu.svg" alt="menu button" class="classHoverEffekt" id="menuButton">
+        </div>
+    </header>
+
+    <div class="mainContainer">
+        <!-- left side -->
+        <div class="leftSideContainer">
+            <img class="mainImg" src="./img/main-img.jpg" alt="Pizza">
+
+            <!-- Name and evaluation container -->
+            <div class="containerPadding">
+            <div id="nameAndEvaluationContainer">
+                <div>
+                    <h1>Mein Pizzarestaurant</h1>
+                    <div id="ratingContainer">
+                        <img src="./icons/star.svg" alt="">
+                        <img src="./icons/star.svg" alt="">
+                        <img src="./icons/star.svg" alt="">
+                        <img src="./icons/star.svg" alt="">
+                        <img src="./icons/star.svg" alt="">
+                        <a href="#" id="ratingLink">50 Bewertungen</a>
+                    </div>
+                    <div id="minValueDeliveryCostsContainer">
+                        <img src="./icons/shopping_bag.svg" alt="shopping bag">
+                        <p>Min. 15,00 €</p>
+                        <img src="./icons/pedal_bike.svg" alt="pedal bike">
+                        <p>2,00 €</p> 
+                    </div>
+                </div>
+
+                <!-- Info And Like -->
+                <div id="infoLikeContainer">
+                    <div class="infoLikeButton"><img src="./icons/info.svg" alt="Info"></div>
+                    <div class="infoLikeButton" onclick="likeDisslike()"><img src="./icons/heart.svg" alt="Like" id="likeButton"></div>
+                </div>
+            </div>
+
+            <!-- Slide bar -->
+            <div id="linkSlideBarContainer">
+                <a href="#beliebt" class="linkSliderBar">Beliebt</a>
+                <a href="#salate" class="linkSliderBar">Salate</a>
+                <a href="#pizzen" class="linkSliderBar">Pizzen</a>
+                <a href="#desserts" class="linkSliderBar">Dessert</a>
+            </div>
+
+            <!-- Dishes Container -->
+            <div id="dishesMainContainer">
+                    
+            </div>
+        </div>
+
+        
+    </div>
+        <!-- Shopping cart right side -->
+        <div class="rightSideContainer" id="rightSideContainer">
+            <h1>Warenkorb</h1>
+            <div id="containerShoppingTypeButtons">
+            <button id="shippingTypeButtonLeft" class="shippingTypeButton" onclick="switchShippingTypeButtons(`left`)">
+                <img src="./icons/pedal_bike.svg" alt="">
+                <div class="shippingTypeButtonText">
+                    <label for="text">Lieferung</label>
+                    <label for="text">20-45 min</label>
+                </div>
+            </button>
+            <button id="shippingTypeButtonRight" class="shippingTypeButton" onclick="switchShippingTypeButtons(`right`)">
+                <img src="./icons/shopping_bag.svg" alt="">
+                <div class="shippingTypeButtonText">
+                    <label for="text">Abholung</label>
+                    <label for="text">15 min</label>
+                </div>
+            </button>
+        </div>
+            <div id="shoppingCartContainer">
+                <img src="./icons/shopping_bag.svg" alt="" id="shoppingCartShoppingBagImg">
+                <h1>Fülle deinen Warenkorb</h1>
+                <p>Füge einige leckere Gerichte aus der</p>
+                <p>Speichsekarte hinzu und bestelle dein Essen.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Shopping cart open/close button & close shopping cart button -->
+   <div id="mobileShoppingCartButton" onclick="openMobileShoppingCart()">Einkaufswagen</div>
+   <img src="./icons/close.svg" alt="Close" id="closeButtonShoppinCart" onclick="closeMobileShoppingCart()">
+    
+
+</body>
+
+
+</html>
